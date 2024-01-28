@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: User-Service
+  data:
+    mongodb:
+      uri: mongodb+srv://user:user@cluster0.ipwdssf.mongodb.net/UserDB?retryWrites=true&w=majority
+    #uri: mongodb://localhost:27017/UserDB
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://3.110.47.112:8761/eureka
